@@ -1,0 +1,9 @@
+**/.vs/
+**/.vscode/
+**/bin/
+**/obj/
+
+**.aps
+**.dropbox.attr
+**.DS_Store
+**.user
