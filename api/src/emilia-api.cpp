@@ -1,15 +1,24 @@
-#include "rain/rain.hpp"
-
 #include "emilia-api.hpp"
 
-int main() {
-	std::cout << "Hello world! This is the emilia-api." << std::endl;
-	std::cout << "Using rain v"
-						<< RAIN_VERSION_MAJOR << "."
-						<< RAIN_VERSION_MINOR << "."
-						<< RAIN_VERSION_REVISION << "."
-						<< RAIN_VERSION_BUILD << "." << std::endl;
-	std::cout << "This binary was built on "
-						<< Rain::getPlatformString() << "." << std::endl;
+int main(int argc, char *argv[], char **envp) {
+	long long httpPort = 80,
+						httpsPort = 443;
+	char rootDir[1024] = "./";
+	bool autoHeaders = false;
+
+	Rain::CommandLineParser parser;
+	parser.addParser("http-port", &httpPort);
+	parser.addParser("https-port", &httpsPort);
+	parser.addParser("root-dir", rootDir, 1024);
+	parser.addParser("D", rootDir, 1024);
+	parser.addParser("auto-headers", &autoHeaders);
+	parser.parse(argc - 1, argv + 1);
+
+	std::cout << "Starting HTTP server on port " << httpPort << std::endl
+						<< "Starting HTTPS server on port " << httpsPort << std::endl
+						<< "Serving directory " << rootDir << std::endl
+						<< "Auto headers is " << (autoHeaders ? "active" : "inactive")
+						<< "." << std::endl;
+
 	return 0;
 }

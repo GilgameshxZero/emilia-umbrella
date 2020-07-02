@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+
 # Directories relative paths.
 ROOT_DIR := ../
 RAIN_INCLUDE_DIR := $(ROOT_DIR)../rain/include/
