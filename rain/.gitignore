@@ -4,6 +4,7 @@
 **/obj/
 
 **.aps
+**.db
 **.dropbox.attr
 **.DS_Store
 **.stackdump

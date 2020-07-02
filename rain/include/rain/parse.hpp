@@ -31,7 +31,7 @@ namespace Rain {
 		~WaterfallParser();
 
 		// Attempt to parse a key with previously added parsers.
-		int parse(const char *, const char *);
+		int parse(const char *, const char *) const;
 
 		// Add a way to parse a key. Key must not have been added before.
 		int addParser(const char *, bool *);
@@ -52,6 +52,6 @@ namespace Rain {
 
 	class CommandLineParser : public WaterfallParser {
 		public:
-		int parse(int, char *[]);
+		int parse(int, char *[]) const;
 	};
 }

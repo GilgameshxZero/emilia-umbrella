@@ -19,7 +19,7 @@ namespace Rain {
 		}
 	}
 
-	int WaterfallParser::parse(const char *key, const char *sValue) {
+	int WaterfallParser::parse(const char *key, const char *sValue) const {
 		// Error if key not found.
 		auto it = this->keyParsers.find(key);
 		if (it == this->keyParsers.end()) {
@@ -92,7 +92,7 @@ namespace Rain {
 		return 0;
 	}
 
-	int CommandLineParser::parse(int argc, char *argv[]) {
+	int CommandLineParser::parse(int argc, char *argv[]) const {
 		static char nullValue = '\0';
 		for (int a = 0; a < argc; a++) {
 			char *arg = argv[a],
