@@ -1,15 +1,15 @@
 [submodule "rain"]
 	path = rain
-	url = https://github.com/GilgameshxZero/rain.git
+	url = git@github.com:GilgameshxZero/rain.git
 [submodule "emilia-tan"]
 	path = emilia-tan
-	url = https://github.com/GilgameshxZero/emilia-tan.git
+	url = git@github.com:GilgameshxZero/emilia-tan.git
 [submodule "emilia-web"]
 	path = emilia-web
-	url = https://github.com/GilgameshxZero/emilia-web.git
+	url = git@github.com:GilgameshxZero/emilia-web.git
 [submodule "emilia-mail"]
 	path = emilia-mail
-	url = https://github.com/GilgameshxZero/emilia-mail.git
+	url = git@github.com:GilgameshxZero/emilia-mail.git
 [submodule "emilia-design"]
 	path = emilia-design
-	url = https://github.com/GilgameshxZero/emilia-design.git
+	url = git@github.com:GilgameshxZero/emilia-design.git
